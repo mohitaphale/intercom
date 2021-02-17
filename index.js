@@ -6,7 +6,7 @@ import { DUBLIN_POINT, THRESHOLD, DEFAULT_FILEPATH } from './config.js';
 const argumentCount = process.argv.length;
 const filePath = argumentCount >= 3 ? process.argv[2] : DEFAULT_FILEPATH;
 
-const customers = getFileRecords(filePath).map(parseCustomer);
+const customers = getFileRecords(filePath).map(parseCustomer).filter(x => x);
 
 const isNearDublin = isPointNearFn(DUBLIN_POINT, THRESHOLD);
 const customersNearDublin = customers.filter(isNearDublin);
