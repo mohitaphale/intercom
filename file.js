@@ -4,12 +4,12 @@ function getFileRecords(filePath) {
     try {
         const content = fs.readFileSync(filePath, { encoding: 'utf8' });
         const lines = content.split("\n");
-        const records = lines.map(fromJsonToRecord);
+        const records = lines.map(fromJsonToRecord).filter(x => x);
         return records;
     }
     catch (err) {
         console.error(`[ERROR] Unable to read file at path [${filePath}]: ${err.message}`);
-        process.exit(-1);
+        return [];
     }
 }
 
