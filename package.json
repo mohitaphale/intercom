@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Geographical distance from Dublin",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,5 +10,11 @@
     "intercom"
   ],
   "author": "Mohit Aphale",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine-core": "^3.6.0",
+    "karma": "^6.1.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^4.0.1"
+  }
 }

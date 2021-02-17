@@ -7,4 +7,4 @@ const THRESHOLD = 100;
 
 const DEFAULT_FILEPATH = './resources/customers.txt';
 
-export { DUBLIN_POINT, THRESHOLD, DEFAULT_FILEPATH };
+module.exports = { DUBLIN_POINT, THRESHOLD, DEFAULT_FILEPATH };

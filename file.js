@@ -1,16 +1,15 @@
-import { readFileSync } from 'fs';
-import { exit } from 'process';
+const fs = require('fs');
 
 function getFileRecords(filePath) {
     try {
-        const content = readFileSync(filePath, { encoding: 'utf8' });
+        const content = fs.readFileSync(filePath, { encoding: 'utf8' });
         const lines = content.split("\n");
         const records = lines.map(fromJsonToRecord);
         return records;
     }
     catch (err) {
         console.error(`[ERROR] Unable to read file at path [${filePath}]: ${err.message}`);
-        exit(-1);
+        process.exit(-1);
     }
 }
 
@@ -25,4 +24,4 @@ function fromJsonToRecord(line, index) {
     }
 }
 
-export { getFileRecords, fromJsonToRecord };
+module.exports = { getFileRecords, fromJsonToRecord };

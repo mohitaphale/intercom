@@ -26,4 +26,4 @@ function degreeToRadian(point) {
     };
 }
 
-export { getArcLength, isPointNearFn, degreeToRadian };
+module.exports = { getArcLength, isPointNearFn, degreeToRadian };

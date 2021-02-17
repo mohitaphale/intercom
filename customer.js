@@ -1,6 +1,6 @@
-import { EOL } from 'os';
+const os = require('os');
 
-function parseCustomer(record) {
+function parse(record) {
 
     if (!record) {
         return null;
@@ -31,13 +31,13 @@ function parseCustomer(record) {
     return record;
 }
 
-function formatCustomers(customers) {
+function format(customers) {
     const formattedList = customers.map(c => `${c.name}, ${c.user_id}`);
-    return formattedList.join(EOL);
+    return formattedList.join(os.EOL);
 }
 
 function sortByUserId(c1, c2) {
     return Math.sign(c1.user_id - c2.user_id);
 }
 
-export { parseCustomer, formatCustomers, sortByUserId };
+module.exports = { parse, format, sortByUserId };
