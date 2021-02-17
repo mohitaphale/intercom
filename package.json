@@ -11,10 +11,5 @@
   ],
   "author": "Mohit Aphale",
   "license": "MIT",
-  "devDependencies": {
-    "jasmine-core": "^3.6.0",
-    "karma": "^6.1.1",
-    "karma-chrome-launcher": "^3.1.0",
-    "karma-jasmine": "^4.0.1"
-  }
+  "devDependencies": {}
 }
