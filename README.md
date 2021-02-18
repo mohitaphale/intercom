@@ -2,7 +2,7 @@
 node.js 14
 
 #### Installation
-```
+```shell
     $ npm install
 ```
 
