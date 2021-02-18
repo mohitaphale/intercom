@@ -19,5 +19,6 @@ Available at ```coverage/lcov-report/```
     $ node index.js
 
     # Or, with custom resource file
+    
     $ node index.js ./path/to/external/customer-list.txt
 ```
